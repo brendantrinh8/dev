@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game!</title>
+</head>
+<body>
+    <script>
+        
+        let playerScore = 0;
+        let computerScore = 0;
+
+
+        /* 1. A function that randomly returns rock,paper or scissors for the Ai. */
+        function computerPlay() {
+            // return aiChoice[Math.floor(Math.random()* aiChoice.length)];
+            //math.floor returns a number downwards to the nearest integer, can be shortened to ~~
+            const aiChoice = ["rock","paper","scissor"];
+            return aiChoice[~~(Math.random() * aiChoice.length)];
+        }
+
+        
+        /* 2. Plays a single round of rock paper scissors compares player and Ai parameters. */
+        function playRound(playerSelection, computerSelection) {
+            console.log("You selected": "${playerSelection}")
+
+            // Rock Selection
+            if (playerSelection == "rock" && computerSelection == "scissor"){
+                playerScore += 1;
+                return "you win"
+            } else if (playerSelection == "rock" && computerSelection == "paper") {
+                computerScore += 1;
+                return "you lose"
+            } else if (playerSelection == "rock" && computerSelection == "rock") {
+                return "you tie"
+            }
+            // Paper Selection
+            if (playerSelection == "paper" && computerSelection == "rock"){
+                playerScore += 1;
+                return "you win"
+            } else if (playerSelection == "paper" && computerSelection == "scissor") {
+                computerScore += 1;
+                return "you lose"
+                
+            } else if (playerSelection == "paper" && computerSelection == "paper") {
+                return "you tie"
+            }
+            
+            // Scissor Selection
+            if (playerSelection == "scissor" && computerSelection == "paper"){
+                playerScore += 1;
+                return "you win"
+            } else if (playerSelection == "scissor" && computerSelection == "rock") {
+                computerScore += 1;
+                return "you lose"
+            } else if (playerSelection == "scissor" && computerSelection == "scissor") {
+                return "you tie"
+            }
+        }
+
+
+        function game(){
+            const games = 5;
+
+                const computerSelection = computerPlay();
+                const playerSelection = prompt("Please enter rock, paper or scissor").toLowerCase();
+                playRound(playerSelection, computerSelection);
+        }
+
+    </script>
+</body>
+</html>

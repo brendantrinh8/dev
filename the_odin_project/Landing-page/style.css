@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.header,
+.footer {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 900;
+    background-color: #1F2937;
+    color: aliceblue;
+    height: 50px;
+}
+.banner{
+    background-color: #1F2937; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px;
+}
+
+.left-banner{
+    color: aliceblue;
+    width: 350px;
+}
+
+.japan-img {
+    width: 600px;
+    height: 350px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.quote {
+    display: flex;
+    height: 600px;
+    background-color: #E5E7EB;
+    font-size: 60px;
+    font-weight: black 900;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-align: center;
+}
+
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    border: 3px solid #3882f6;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    color: #e5e7eb;
+}
+
+.info{
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 250px;
+    gap: 50px;
+}
+.signup-button {
+    font-family: Roboto, sans-serif;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #3882f6;
+    padding: 10px;
+    color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+}
